@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class 
+         name="com.fizyoterapi.model.User" />
+  
+   <id name="id" type="Integer">
+        <column name="ID" />
+        <generator class="increment" />
+    </id>
+    <property name="firstName" type="string">
+        <column name="FirstName" length="100" not-null="true" unique="true" />
+    </property>
+    <property name="lastName" type="string">
+        <column name="LastName" length="100" not-null="true" unique="true" />
+    </property>
+    <property name="tc" type="string">
+        <column name="TC" length="100" not-null="true" unique="true" />
+    </property>
+  <property name="tip" type="Integer"/>
+  
+</hibernate-mapping>
